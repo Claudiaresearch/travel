@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="10月15-18日西双版纳和丽江的逐项对比">
-<title>版纳还是丽江</title>
+<meta name="description" content="2026年10月15-18日丽江四天行程">
+<title>丽江四天</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap">
 <style>
@@ -17,122 +17,99 @@
     --ink-2:#3c525f;
     --line:#c5d3da;
     --line-strong:#9fb3bd;
-    /* 两地配色（已做色盲可辨性校验） */
-    --bna:#B05E10;
-    --bna-soft:#f6ecdf;
-    --lj:#0A6DA8;
-    --lj-soft:#e2eef7;
+    --snow:#0A6DA8;        /* 雪山蓝 */
+    --snow-soft:#e2eef7;
+    --gold:#B05E10;        /* 日照金山 */
+    --gold-soft:#f6ecdf;
     --shadow: 0 1px 2px rgba(20,35,45,.06), 0 6px 18px rgba(20,35,45,.06);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --ground:#0f171c;
-      --surface:#18242b;
-      --surface-2:#2a3b44;
-      --ink:#eaf1f4;
-      --ink-2:#b2c4cd;
-      --line:#31454e;
-      --line-strong:#4a6572;
-      --bna:#C07E2E;
-      --bna-soft:#2b2015;
-      --lj:#3AA0CF;
-      --lj-soft:#122c3a;
+      --ground:#0f171c; --surface:#18242b; --surface-2:#2a3b44;
+      --ink:#eaf1f4; --ink-2:#b2c4cd; --line:#31454e; --line-strong:#4a6572;
+      --snow:#3AA0CF; --snow-soft:#122c3a; --gold:#C07E2E; --gold-soft:#2b2015;
       --shadow:none;
     }
   }
   :root[data-theme="dark"]{
-    --ground:#0f171c;
-    --surface:#18242b;
-    --surface-2:#2a3b44;
-    --ink:#eaf1f4;
-    --ink-2:#b2c4cd;
-    --line:#31454e;
-    --line-strong:#4a6572;
-    --bna:#C07E2E;
-    --bna-soft:#2b2015;
-    --lj:#3AA0CF;
-    --lj-soft:#122c3a;
+    --ground:#0f171c; --surface:#18242b; --surface-2:#2a3b44;
+    --ink:#eaf1f4; --ink-2:#b2c4cd; --line:#31454e; --line-strong:#4a6572;
+    --snow:#3AA0CF; --snow-soft:#122c3a; --gold:#C07E2E; --gold-soft:#2b2015;
     --shadow:none;
   }
 
   *{box-sizing:border-box}
-  body{
-    margin:0;background:var(--ground);color:var(--ink);
+  body{margin:0;background:var(--ground);color:var(--ink);
     font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
-    font-size:var(--base);line-height:1.9;-webkit-text-size-adjust:100%;
-  }
+    font-size:var(--base);line-height:1.9;-webkit-text-size-adjust:100%}
   .wrap{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
   h1,h2,h3{font-family:"Noto Serif SC","Songti SC","SimSun",serif;text-wrap:balance;line-height:1.4;margin:0}
   p{margin:0}
+  strong{font-weight:700}
 
-  /* 顶部字号 */
   .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px 0}
   .brandline{font-size:.78em;letter-spacing:.16em;color:var(--ink-2)}
   .fs{display:flex;align-items:center;gap:8px;font-size:.78em;color:var(--ink-2)}
   .fs button{font:inherit;font-family:inherit;min-width:52px;min-height:44px;padding:0 12px;
     border:1.5px solid var(--line-strong);border-radius:10px;background:var(--ground);color:var(--ink);cursor:pointer}
   .fs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
-  .fs button:focus-visible{outline:3px solid var(--lj);outline-offset:2px}
+  .fs button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
   header.hero{padding-block:22px 30px;border-bottom:3px solid var(--ink);margin-bottom:34px}
   header.hero h1{font-size:2em;font-weight:700}
   .sub{margin-top:12px;font-size:1.02em;color:var(--ink-2)}
 
-  /* 图例 */
-  .legend{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px}
-  .lg{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:2px solid;font-weight:700;font-size:.92em}
-  .lg.b{border-color:var(--bna);background:var(--bna-soft);color:var(--ink)}
-  .lg.l{border-color:var(--lj);background:var(--lj-soft);color:var(--ink)}
-  .dot{width:18px;height:18px;border-radius:5px;flex:0 0 auto}
-  .dot.b{background:var(--bna)}
-  .dot.l{background:var(--lj)}
-
-  .howto{margin-top:18px;font-size:.88em;color:var(--ink-2)}
-
-  section{margin-top:44px}
+  section{margin-top:46px}
   h2{font-size:1.4em;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--line)}
 
-  /* 打分项 */
-  .dims{margin-top:24px;display:flex;flex-direction:column;gap:26px}
-  .dim{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:22px 22px 24px;box-shadow:var(--shadow)}
-  .dim h3{font-size:1.16em;font-weight:700}
-  .bars{margin-top:16px;display:flex;flex-direction:column;gap:16px}
-  .bar .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
-  .bar .who{font-weight:700;font-size:.95em}
-  .bar.b .who{color:var(--bna)}
-  .bar.l .who{color:var(--lj)}
-  .bar .val{font-size:.85em;color:var(--ink-2);font-variant-numeric:tabular-nums}
-  .cells{margin-top:7px;display:flex;gap:2px;height:22px}
-  .cell{flex:1;border-radius:4px;background:var(--surface-2)}
-  .bar.b .cell.on{background:var(--bna)}
-  .bar.l .cell.on{background:var(--lj)}
+  /* 航班 */
+  .flights{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .fl{background:var(--snow-soft);border-left:8px solid var(--snow);border-radius:14px;padding:20px 22px}
+  .fl .when{font-size:.82em;font-weight:700;letter-spacing:.06em;color:var(--snow)}
+  .fl .time{margin-top:8px;font-size:1.5em;font-weight:700;font-variant-numeric:tabular-nums;
+    font-family:"Noto Serif SC",serif;line-height:1.3}
+  .fl .where{margin-top:6px;font-size:.88em;color:var(--ink-2)}
+  .fl .extra{margin-top:12px;padding-top:12px;border-top:1.5px solid var(--line);font-size:.85em}
+  .price{margin-top:18px;padding:16px 20px;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);font-size:.92em}
 
-  /* 文字对比项 */
-  .facts{margin-top:24px;display:flex;flex-direction:column;gap:22px}
-  .fact{border-top:1.5px solid var(--line);padding-top:20px}
-  .fact:first-child{border-top:3px solid var(--ink)}
-  .fact h3{font-size:1.1em;font-weight:700}
-  .two{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .box{border-radius:14px;padding:16px 18px;border-left:7px solid}
-  .box.b{border-color:var(--bna);background:var(--bna-soft)}
-  .box.l{border-color:var(--lj);background:var(--lj-soft)}
-  .box .name{font-weight:700;font-size:.88em;letter-spacing:.04em}
-  .box.b .name{color:var(--bna)}
-  .box.l .name{color:var(--lj)}
-  .box .txt{margin-top:6px;font-size:.92em}
+  .warn{margin-top:18px;padding:20px 22px;border-radius:14px;background:var(--gold-soft);border:2px solid var(--gold)}
+  .warn h3{font-size:1.08em;color:var(--gold);margin-bottom:8px}
 
-  .pick{margin-top:44px;padding:26px;border-radius:16px;background:var(--surface);border:3px solid var(--ink)}
-  .pick h2{border:0;padding:0;font-size:1.35em}
-  .pick .line{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
-  .pick .k{font-weight:700;padding:2px 12px;border-radius:999px;font-size:.8em;white-space:nowrap;line-height:1.9;color:var(--ground)}
-  .pick .k.b{background:var(--bna)}
-  .pick .k.l{background:var(--lj)}
+  /* 每日 */
+  .days{margin-top:26px;display:flex;flex-direction:column;gap:0}
+  .day{padding-block:28px;border-top:1.5px solid var(--line)}
+  .day:first-child{border-top:3px solid var(--ink)}
+  .day:last-child{border-bottom:1.5px solid var(--line)}
+  .dhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .ddate{font-family:"Noto Serif SC",serif;font-size:1.3em;font-weight:700;color:var(--snow)}
+  .day h3{font-size:1.18em;font-weight:700}
+  .sched{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .slot{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+  .slot .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:.9em;color:var(--ink-2);
+    background:var(--surface);border-radius:8px;padding:2px 10px;text-align:center}
+  .slot .d{font-size:.96em}
+  .tip{margin-top:16px;padding:14px 18px;border-radius:12px;background:var(--surface);font-size:.87em;color:var(--ink-2)}
 
-  footer{margin-top:44px;padding-top:22px;border-top:1.5px solid var(--line);color:var(--ink-2);font-size:.82em}
+  /* 清单 */
+  ol.todo{margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
+  ol.todo li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    padding:20px 22px;background:var(--surface);border-radius:14px;border:1.5px solid var(--line)}
+  ol.todo .n{width:42px;height:42px;border-radius:12px;background:var(--snow);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;font-variant-numeric:tabular-nums}
+  ol.todo b{display:block;font-size:1.04em}
+  ol.todo span{display:block;margin-top:4px;color:var(--ink-2);font-size:.92em}
 
-  @media (max-width:460px){
-    .two{grid-template-columns:1fr}
-    .dim{padding:18px}
+  .packs{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .pack{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+  .pack h3{font-size:1.08em;font-weight:700;margin-bottom:10px}
+  .pack ul{margin:0;padding-left:1.2em;font-size:.93em}
+  .pack li{margin-top:6px}
+
+  footer{margin-top:48px;padding-top:22px;border-top:1.5px solid var(--line);color:var(--ink-2);font-size:.82em}
+
+  @media (max-width:520px){
+    .flights,.packs{grid-template-columns:1fr}
+    .slot{grid-template-columns:84px 1fr;gap:12px}
   }
 </style>
 </head>
@@ -142,7 +119,7 @@
 <div class="wrap">
 
   <div class="topbar">
-    <div class="brandline">10 月 15 日 – 18 日 · 四天 · 两个人</div>
+    <div class="brandline">2026 年 10 月 15 – 18 日 · 上海 ⇄ 丽江 · 两个人</div>
     <div class="fs">
       <span>字号</span>
       <button type="button" data-size="19" aria-pressed="false">小</button>
@@ -152,102 +129,85 @@
   </div>
 
   <header class="hero">
-    <h1>版纳还是丽江</h1>
-    <p class="sub">同样的日子、同样的天数、机票也差不多，就看想过哪一种四天。</p>
-
-    <div class="legend">
-      <span class="lg b"><span class="dot b"></span>西双版纳</span>
-      <span class="lg l"><span class="dot l"></span>丽江</span>
-    </div>
-    <p class="howto">下面每一项都有五个格子，<strong>格子越多，程度越高</strong>。橙色是版纳，蓝色是丽江。</p>
+    <h1>丽江四天</h1>
+    <p class="sub">住在雪山脚下的白沙，不进古城。一天上雪山，一天走峡谷，头尾两天轻松。</p>
   </header>
 
   <section>
-    <h2>身体感受上的差别</h2>
+    <h2>机票（已定）</h2>
 
-    <div class="dims">
+    <div class="flights">
+      <div class="fl">
+        <div class="when">去程 · 10 月 15 日 周四</div>
+        <div class="time">08:35 → 12:20</div>
+        <div class="where">浦东 T2 → 丽江三义机场 · 春秋航空</div>
+        <div class="extra">06:40 前到机场，家里 05:40 出门，五点多起床。</div>
+      </div>
+      <div class="fl">
+        <div class="when">返程 · 10 月 18 日 周日</div>
+        <div class="time">18:20 → 21:50</div>
+        <div class="where">丽江三义机场 → 浦东 T2 · 春秋航空</div>
+        <div class="extra">16:20 前到机场，白沙 15:00 出发。到家约 23:00。</div>
+      </div>
+    </div>
 
-      <div class="dim">
-        <h3>白天热不热</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">28–31℃，能穿短袖</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">18–22℃，薄外套</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
+    <p class="price">往返每人 <strong>1432 元</strong>。去程和返程都在浦东，不用两头跑，但当天别自己开车停机场，打车更省事。</p>
+
+    <div class="warn">
+      <h3>春秋的行李要单独买</h3>
+      <p>特价票一般只含随身行李，托运要另外加购，<strong>在订单里提前买比到机场买便宜不少</strong>。丽江早晚只有几度，厚衣服占地方，回来大概还要带东西，两个人按各一件托运准备。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>四天安排</h2>
+
+    <div class="days">
+
+      <div class="day">
+        <div class="dhead"><span class="ddate">10/15 周四</span><h3>落地，先让身体适应</h3></div>
+        <div class="sched">
+          <div class="slot"><span class="t">12:20</span><span class="d">落地三义机场，包车来接，去白沙约 50 分钟。</span></div>
+          <div class="slot"><span class="t">13:30</span><span class="d">民宿放行李，附近吃顿午饭。丽江 2400 米，第一天不爬升。</span></div>
+          <div class="slot"><span class="t">15:30</span><span class="d">玉湖村慢慢走走，石头路、洛克故居，背后就是玉龙雪山。想骑马进山谷也可以。</span></div>
+          <div class="slot"><span class="t">18:00</span><span class="d">在村里等日落，雪山会染上一层暖光。</span></div>
+          <div class="slot"><span class="t">19:00</span><span class="d">晚饭吃纳西菜：腊排骨火锅、鸡豆凉粉、丽江粑粑。</span></div>
         </div>
+        <p class="tip">第一天不要走急、不要洗太热的澡，早点睡，第二天才有力气上雪山。</p>
       </div>
 
-      <div class="dim">
-        <h3>早晚冷不冷</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">22℃ 上下，不用加衣</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">6–10℃，要厚外套</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell"></i></div>
-          </div>
+      <div class="day">
+        <div class="dhead"><span class="ddate">10/16 周五</span><h3>玉龙雪山，这趟的主角</h3></div>
+        <div class="sched">
+          <div class="slot"><span class="t">07:30</span><span class="d">出发去玉龙雪山景区，白沙过去很近。</span></div>
+          <div class="slot"><span class="t">09:00</span><span class="d">坐冰川大索道上 4506 米观景台。缆车站能租羽绒服和氧气。上去以后慢走、少说话，不舒服就早点下来。</span></div>
+          <div class="slot"><span class="t">12:00</span><span class="d">下山，甘海子一带吃午饭。</span></div>
+          <div class="slot"><span class="t">14:00</span><span class="d">蓝月谷。十月水量足，颜色正从雨季的浑浊转回清透。</span></div>
+          <div class="slot"><span class="t">16:30</span><span class="d">回白沙休息。</span></div>
+          <div class="slot"><span class="t">18:00</span><span class="d">日落前再去甘海子方向拍一次雪山，这个点的光最好。</span></div>
         </div>
+        <p class="tip">索道票要提前几天在官方小程序抢，实名限流。遇大风会临时停运，真停了就把这天和第四天对调。</p>
       </div>
 
-      <div class="dim">
-        <h3>每天要走多少路</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">平地为主，一天 5–8 公里</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">有一天要走 4–5 小时山路</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i></div>
-          </div>
+      <div class="day">
+        <div class="dhead"><span class="ddate">10/17 周六</span><h3>虎跳峡，最费腿也最过瘾</h3></div>
+        <div class="sched">
+          <div class="slot"><span class="t">07:30</span><span class="d">出发去虎跳峡，车程约 2 小时。</span></div>
+          <div class="slot"><span class="t">09:30</span><span class="d">走中虎跳的徒步栈道。金沙江夹在玉龙雪山和哈巴雪山中间，落差三千多米。</span></div>
+          <div class="slot"><span class="t">14:00</span><span class="d">上来吃个便饭，休息。</span></div>
+          <div class="slot"><span class="t">16:00</span><span class="d">返回白沙，晚上早点休息。</span></div>
         </div>
+        <p class="tip">来回四到五个小时，鞋一定要抓地好，栈道有陡台阶和窄段。带够水和两块巧克力。走不动随时可以原路折返，不用勉强走到底。</p>
       </div>
 
-      <div class="dim">
-        <h3>海拔高不高</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">550 米，和上海差不多</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">2400 米，坐索道上到 4506 米</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dim">
-        <h3>蚊虫多不多</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">多，驱蚊液必备</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">几乎没有</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dim">
-        <h3>十月中旬的天气好不好</h3>
-        <div class="bars">
-          <div class="bar b">
-            <div class="head"><span class="who">西双版纳</span><span class="val">雨季尾巴，闷热、午后阵雨</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell"></i><i class="cell"></i><i class="cell"></i></div>
-          </div>
-          <div class="bar l">
-            <div class="head"><span class="who">丽江</span><span class="val">雨季刚过，一年里最晴</span></div>
-            <div class="cells"><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i><i class="cell on"></i></div>
-          </div>
+      <div class="day">
+        <div class="dhead"><span class="ddate">10/18 周日</span><h3>平路收尾，傍晚回家</h3></div>
+        <div class="sched">
+          <div class="slot"><span class="t">08:30</span><span class="d">白沙早市转转，买点普洱、鲜花饼。</span></div>
+          <div class="slot"><span class="t">10:00</span><span class="d">拉市海或文笔海环湖走一圈，全程平路，不累。</span></div>
+          <div class="slot"><span class="t">13:00</span><span class="d">回民宿吃午饭、收拾行李。</span></div>
+          <div class="slot"><span class="t">15:00</span><span class="d">出发去机场。</span></div>
+          <div class="slot"><span class="t">18:20</span><span class="d">起飞，21:50 落浦东。</span></div>
         </div>
       </div>
 
@@ -255,75 +215,41 @@
   </section>
 
   <section>
-    <h2>玩法和花销上的差别</h2>
+    <h2>出发前要订的四件事</h2>
+    <ol class="todo">
+      <li><div class="n">1</div><div><b>托运行李</b><span>在春秋的订单里提前加购，去程返程都要。</span></div></li>
+      <li><div class="n">2</div><div><b>玉龙雪山大索道票</b><span>官方小程序实名抢票，提前三到五天。留意当天风力预报。</span></div></li>
+      <li><div class="n">3</div><div><b>住宿</b><span>白沙或玉湖村的民宿，三晚。选带院子、能看到雪山的，别订大研古城里的。</span></div></li>
+      <li><div class="n">4</div><div><b>包车</b><span>四天包车最省心，日均大约四百到六百。虎跳峡那天尤其需要，比拼车灵活得多。</span></div></li>
+    </ol>
+  </section>
 
-    <div class="facts">
-
-      <div class="fact">
-        <h3>主要看什么</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">热带雨林、野生亚洲象、傣族金顶佛塔、夜里打着手电看雨林、澜沧江边的夜市</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">玉龙雪山的冰川、蓝月谷、金沙江大峡谷（虎跳峡）、雪山脚下的纳西村子</div></div>
-        </div>
+  <section>
+    <h2>带什么</h2>
+    <div class="packs">
+      <div class="pack">
+        <h3>衣服（白天 18–22℃，早晚 6–10℃，山顶零下）</h3>
+        <ul>
+          <li>薄羽绒或厚外套，早晚和山顶都要穿</li>
+          <li>里面用可脱的薄毛衣打底，白天热了好脱</li>
+          <li>抓地好的徒步鞋，虎跳峡那天全靠它</li>
+          <li>帽子和围巾，山顶风大</li>
+        </ul>
       </div>
-
-      <div class="fact">
-        <h3>主要吃什么</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">香茅草烤鱼、包烧、酸笋煮鱼、菠萝饭，还有吃不完的热带水果</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">腊排骨火锅、鸡豆凉粉、丽江粑粑、菌子，口味偏咸香</div></div>
-        </div>
+      <div class="pack">
+        <h3>别忘了</h3>
+        <ul>
+          <li>高倍防晒，高原紫外线很强，比上海厉害得多</li>
+          <li>润唇膏和面霜，干燥</li>
+          <li>保温杯，多喝水能缓解高原反应</li>
+          <li>常用药、身份证、充电宝</li>
+        </ul>
       </div>
-
-      <div class="fact">
-        <h3>机票（两人往返每人）</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">1279 元</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">1364 元，只贵 85 元</div></div>
-        </div>
-      </div>
-
-      <div class="fact">
-        <h3>出发那天几点起床</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">六点的飞机，凌晨三点半就要出门</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">四点起（东航），或者多花 68 元换成春秋，六点半起就行</div></div>
-        </div>
-      </div>
-
-      <div class="fact">
-        <h3>回来那天几点到家</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">夜里十一点五十五落虹桥，到家差不多凌晨一点</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">晚上九点五十落浦东，到家十点半左右</div></div>
-        </div>
-      </div>
-
-      <div class="fact">
-        <h3>用哪个机场</h3>
-        <div class="two">
-          <div class="box b"><div class="name">西双版纳</div><div class="txt">去浦东、回虹桥，两个机场不一样，不方便停车</div></div>
-          <div class="box l"><div class="name">丽江</div><div class="txt">去和回都在浦东</div></div>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <div class="pick">
-    <h2>那到底选哪个</h2>
-    <div class="line">
-      <span class="k b">选版纳</span>
-      <p>想暖和、想松快、想吃，每天走走停停，不想爬山也不想受冻。缺点是十月还闷热、有蚊子、回来那天要熬到后半夜。</p>
-    </div>
-    <div class="line">
-      <span class="k l">选丽江</span>
-      <p>想看真正的大雪山和大峡谷，愿意多走路、早晚穿厚一点。十月的丽江是一年里天气最好的时候，来回时间也比版纳舒服。</p>
-    </div>
-  </div>
-
   <footer>
-    <p>机票价格是 9 月 20 日查到的，会变动。格子的多少是按体感估的，用来快速比较，不是精确数据。</p>
+    <p>索道、门票的价格以官方小程序为准。天气有变的话，第二天和第四天可以整天对调，不影响其他安排。</p>
   </footer>
 </div>
 
