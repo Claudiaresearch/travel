@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="1月下旬和妈妈去云南三四天的目的地对比与丽江行程方案">
+<title>云南三四天去哪玩</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap">
+<style>
+  :root{
+    --base: 21px;
+    --ground:#ffffff;
+    --surface:#f1f5f7;
+    --surface-2:#e4ecf0;
+    --ink:#14232d;
+    --ink-2:#3c525f;
+    --line:#c5d3da;
+    --line-strong:#9fb3bd;
+    --accent:#0f5b7d;
+    --accent-soft:#e0eef5;
+    --warm:#a85c22;
+    --warm-soft:#f7ece1;
+    --good:#1d6a49;
+    --bad:#9e342a;
+    --shadow: 0 1px 2px rgba(20,35,45,.06), 0 6px 18px rgba(20,35,45,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#0f171c;
+      --surface:#18242b;
+      --surface-2:#22323a;
+      --ink:#eaf1f4;
+      --ink-2:#b2c4cd;
+      --line:#31454e;
+      --line-strong:#4a6572;
+      --accent:#74c2e2;
+      --accent-soft:#16303d;
+      --warm:#e3a670;
+      --warm-soft:#2e2318;
+      --good:#6cc89b;
+      --bad:#ea8b7f;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0f171c;
+    --surface:#18242b;
+    --surface-2:#22323a;
+    --ink:#eaf1f4;
+    --ink-2:#b2c4cd;
+    --line:#31454e;
+    --line-strong:#4a6572;
+    --accent:#74c2e2;
+    --accent-soft:#16303d;
+    --warm:#e3a670;
+    --warm-soft:#2e2318;
+    --good:#6cc89b;
+    --bad:#ea8b7f;
+    --shadow: none;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ground);
+    color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+    font-size:var(--base);
+    line-height:1.95;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:780px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+  h1,h2,h3{font-family:"Noto Serif SC","Songti SC","SimSun",serif;text-wrap:balance;line-height:1.4;margin:0}
+  p{margin:0}
+  strong{font-weight:700;color:var(--ink)}
+
+  /* ---- 顶部字号控制 ---- */
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding-block:18px 0;
+  }
+  .brandline{font-size:.78em;letter-spacing:.18em;color:var(--ink-2)}
+  .fs{display:flex;align-items:center;gap:8px;font-size:.78em;color:var(--ink-2)}
+  .fs button{
+    font:inherit;font-size:1em;font-family:inherit;
+    min-width:52px;min-height:44px;padding:0 12px;
+    border:1.5px solid var(--line-strong);border-radius:10px;
+    background:var(--ground);color:var(--ink);cursor:pointer;
+  }
+  .fs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--ground)}
+  .fs button:focus-visible{outline:3px solid var(--warm);outline-offset:2px}
+
+  /* ---- 头部 ---- */
+  header.hero{padding-block:22px 34px;border-bottom:3px solid var(--ink);margin-bottom:38px}
+  header.hero h1{font-size:2.05em;font-weight:700}
+  .sub{margin-top:14px;font-size:1.05em;color:var(--ink-2)}
+  .verdict{
+    margin-top:26px;padding:22px 24px;border-radius:14px;
+    background:var(--accent-soft);border-left:8px solid var(--accent);
+  }
+  .verdict .lead{font-size:1.15em;font-weight:700}
+  .verdict p + p{margin-top:10px}
+
+  /* ---- 区块 ---- */
+  section{margin-top:52px}
+  h2{
+    font-size:1.5em;font-weight:700;
+    padding-bottom:12px;border-bottom:2px solid var(--line);
+  }
+  .note{margin-top:20px;color:var(--ink-2)}
+
+  .tradeoff{
+    margin-top:22px;padding:22px 24px;border-radius:14px;
+    background:var(--warm-soft);border:2px solid var(--warm);
+  }
+  .tradeoff h3{font-size:1.12em;color:var(--warm);margin-bottom:10px}
+
+  /* ---- 目的地卡片 ---- */
+  .cards{margin-top:28px;display:flex;flex-direction:column;gap:22px}
+  .card{
+    background:var(--surface);border:1.5px solid var(--line);border-radius:16px;
+    padding:24px;box-shadow:var(--shadow);
+  }
+  .card.pick{background:var(--ground);border:3px solid var(--accent);box-shadow:none}
+  .card-top{display:flex;align-items:baseline;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  .card h3{font-size:1.35em;font-weight:700}
+  .tag{
+    font-size:.72em;font-weight:700;letter-spacing:.08em;line-height:1;
+    padding:10px 14px;border-radius:999px;white-space:nowrap;
+    font-family:"PingFang SC",system-ui,sans-serif;
+  }
+  .tag.t1{background:var(--accent);color:var(--ground)}
+  .tag.t2{background:var(--surface-2);color:var(--ink-2);border:1.5px solid var(--line-strong)}
+  .tag.t3{background:transparent;color:var(--ink-2);border:1.5px dashed var(--line-strong)}
+  .facts{
+    margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 10px;
+    font-size:.8em;color:var(--ink-2);font-variant-numeric:tabular-nums;
+  }
+  .facts span{background:var(--ground);border:1px solid var(--line);border-radius:8px;padding:4px 10px}
+  .card.pick .facts span{background:var(--surface)}
+  .pros{margin-top:16px;display:flex;flex-direction:column;gap:12px}
+  .line{display:flex;gap:12px;align-items:flex-start}
+  .mark{
+    flex:0 0 auto;font-size:.78em;font-weight:700;line-height:1.7;
+    padding:0 10px;border-radius:8px;white-space:nowrap;
+  }
+  .mark.y{background:var(--good);color:var(--ground)}
+  .mark.n{background:var(--bad);color:var(--ground)}
+
+  /* ---- 行程 ---- */
+  .days{margin-top:30px;display:flex;flex-direction:column;gap:0}
+  .day{
+    display:grid;grid-template-columns:auto 1fr;gap:0 22px;
+    padding-block:26px;border-top:1.5px solid var(--line);
+  }
+  .day:first-child{border-top:3px solid var(--ink)}
+  .day:last-child{border-bottom:1.5px solid var(--line)}
+  .daynum{
+    grid-row:span 2;width:62px;height:62px;border-radius:50%;
+    background:var(--accent);color:var(--ground);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Noto Serif SC",serif;font-size:1.3em;font-weight:700;
+  }
+  .day h3{font-size:1.22em;font-weight:700}
+  .day .body{margin-top:10px}
+  .day .body p + p{margin-top:12px}
+  .hi{color:var(--warm);font-weight:700}
+  .alt-block{margin-top:34px;padding:24px;border-radius:14px;background:var(--surface);border:1.5px solid var(--line)}
+  .alt-block h3{font-size:1.15em;font-weight:700;margin-bottom:10px}
+  .alt-block + .alt-block{margin-top:20px}
+
+  /* ---- 清单 ---- */
+  ol.todo{margin:28px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:20px}
+  ol.todo li{
+    display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    padding:20px 22px;background:var(--surface);border-radius:14px;border:1.5px solid var(--line);
+  }
+  ol.todo .n{
+    width:42px;height:42px;border-radius:12px;background:var(--ink);color:var(--ground);
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;
+    font-variant-numeric:tabular-nums;
+  }
+  ol.todo b{display:block;font-size:1.05em}
+  ol.todo span{display:block;margin-top:4px;color:var(--ink-2)}
+
+  footer{margin-top:56px;padding-top:24px;border-top:1.5px solid var(--line);color:var(--ink-2);font-size:.85em}
+
+  @media (max-width:430px){
+    .day{grid-template-columns:1fr;gap:14px}
+    .daynum{grid-row:auto;width:54px;height:54px}
+    .card{padding:20px}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .fs button{transition:background .15s ease,color .15s ease}
+  }
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brandline">1 月下旬 · 两个人 · 含往返 3–4 天</div>
+    <div class="fs">
+      <span>字号</span>
+      <button type="button" id="fs-s" data-size="19" aria-pressed="false">小</button>
+      <button type="button" id="fs-m" data-size="21" aria-pressed="true">中</button>
+      <button type="button" id="fs-l" data-size="26" aria-pressed="false">大</button>
+    </div>
+  </div>
+
+  <header class="hero">
+    <h1>和妈妈的云南，三四天去哪儿</h1>
+    <p class="sub">把云南主要的几个地方摆在一起比一比，再给一个能真正落地的安排。</p>
+
+    <div class="verdict">
+      <p class="lead">结论：去丽江，住雪山脚下，不住古城。</p>
+      <p>三四天里真正能玩的只有两到三天，所以必须是上海直飞、景点又集中的地方。丽江是唯一同时做到这三件事的：看得到真正的大雪山、出片、还能走得动路。</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>先说一件必须取舍的事</h2>
+    <div class="tradeoff">
+      <h3>“穿短袖”和“看雪山”，冬天的云南只能选一个</h3>
+      <p>能穿短袖的只有西双版纳、德宏那一带，海拔低、属于热带，冬天白天二十五度上下，但那里没有雪山，也没有开阔的大风光。</p>
+      <p style="margin-top:12px">有雪山的滇西北，一月白天十五度左右、早晚零下，是穿厚外套的天气，但天最蓝、能见度全年最好，最出片。</p>
+      <p style="margin-top:12px">你想要的“雪山”和“拍风光”都在后面这一边，所以下面按这个方向推荐。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>几个地方的比较</h2>
+    <p class="note">下面每一处都按“含往返三四天”这个前提来看，不是泛泛地说好不好玩。</p>
+
+    <div class="cards">
+
+      <article class="card pick">
+        <div class="card-top">
+          <h3>丽江</h3>
+          <span class="tag t1">这次首选</span>
+        </div>
+        <div class="facts">
+          <span>上海直飞 约 4 小时</span>
+          <span>城区海拔 2400 米</span>
+          <span>白天约 15℃</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>玉龙雪山索道能直接上到 4506 米的冰川观景台，是这几个地方里唯一“震撼”级别的雪山。</p></div>
+          <div class="line"><span class="mark y">好</span><p>蓝月谷、虎跳峡、拉市海都在两小时车程之内，不用再转机、再挪窝。</p></div>
+          <div class="line"><span class="mark y">好</span><p>冬天晴天多、空气透，是一年里拍雪山最清楚的时候。</p></div>
+          <div class="line"><span class="mark n">要注意</span><p>大研古城是纯商业区，你不喜欢古镇，这趟完全可以绕开，住束河外围或白沙、玉湖村。</p></div>
+          <div class="line"><span class="mark n">要注意</span><p>雪山索道实名限流，要提前几天抢票。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>大理</h3>
+          <span class="tag t2">很好的备选</span>
+        </div>
+        <div class="facts">
+          <span>直飞班次少，多需昆明中转</span>
+          <span>海拔 1970 米</span>
+          <span>白天 18–20℃</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>一月的天气是云南最舒服的，妈妈会很自在。</p></div>
+          <div class="line"><span class="mark y">好</span><p>洱海边骑行运动量刚好；苍山顶有雪，配洱海很出片；白族菜好吃。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>苍山的气势跟玉龙雪山不是一个量级，“震撼”这一条给不了。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>中转会吃掉半天，三四天里这半天很贵。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>西双版纳</h3>
+          <span class="tag t2">想暖和就选它</span>
+        </div>
+        <div class="facts">
+          <span>上海直飞 约 4.5 小时</span>
+          <span>海拔 550 米</span>
+          <span>白天 25℃ 以上</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>唯一真能穿短袖的地方，全程低海拔，最省心。</p></div>
+          <div class="line"><span class="mark y">好</span><p>雨林徒步、植物园、告庄夜市，傣味好吃又热闹。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>没有雪山，也没有大开大合的风光，主要是村寨和林子，跟“拍大景”这个想法对不上。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>昆明 + 轿子雪山 / 东川红土地</h3>
+          <span class="tag t3">不太划算</span>
+        </div>
+        <div class="facts">
+          <span>航班最多最便宜</span>
+          <span>轿子雪山 4223 米</span>
+          <span>昆明白天约 18℃</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>机票灵活便宜，轿子雪山冬天有雾凇和积雪，当天能来回。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>昆明市区本身没什么可看；轿子雪山和东川在两个方向，三天塞不下。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>元阳梯田</h3>
+          <span class="tag t3">留给下一次</span>
+        </div>
+        <div class="facts">
+          <span>无直飞，昆明落地后还要 4–5 小时</span>
+          <span>海拔约 1800 米</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>一月正是梯田灌水的时候，全年最佳观赏季，日出云海是摄影天花板。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>路上太耗时间，三四天几乎全花在赶路上，看不了两个日出。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>香格里拉 / 梅里雪山</h3>
+          <span class="tag t3">留给下一次</span>
+        </div>
+        <div class="facts">
+          <span>需昆明或丽江中转</span>
+          <span>海拔 3300 米以上</span>
+          <span>早晚零下十度</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>冬天看到“日照金山”的概率全年最高，风光上限最高。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>中转之外，到德钦还有四小时车程。三四天去就是纯折腾，值得单独留出七天以上。</p></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-top">
+          <h3>腾冲</h3>
+          <span class="tag t3">这次不合适</span>
+        </div>
+        <div class="facts">
+          <span>需中转</span>
+          <span>海拔 1650 米</span>
+          <span>温泉是招牌</span>
+        </div>
+        <div class="pros">
+          <div class="line"><span class="mark y">好</span><p>火山、热海温泉，带妈妈泡汤很舒服。</p></div>
+          <div class="line"><span class="mark n">短板</span><p>银杏季到一月底已经过了，和顺是古镇，再加上中转费时，这趟性价比不高。</p></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>推荐行程：丽江四天</h2>
+    <p class="note">住宿选<strong>束河外围、白沙或玉湖村</strong>，都是雪山脚下的纳西村子，安静、不商业，推窗就是玉龙雪山。</p>
+
+    <div class="days">
+      <div class="day">
+        <div class="daynum">一</div>
+        <h3>飞过去，慢慢适应</h3>
+        <div class="body">
+          <p>上海坐早班机飞丽江，四小时左右落地，中午到。</p>
+          <p>下午不安排重的行程，在玉湖村或白沙一带随便走走，让身体适应 2400 米的高度。傍晚在村口等雪山日落，第一天的光通常最好。</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="daynum">二</div>
+        <h3>玉龙雪山，这趟的主角</h3>
+        <div class="body">
+          <p>上午坐冰川大索道上 <span class="hi">4506 米</span>观景台。缆车站有羽绒服和氧气瓶可以租，上去以后放慢脚步、别快走。</p>
+          <p>下来之后走甘海子、蓝月谷，水是那种冬天特有的蓝绿色。</p>
+          <p>下午回白沙休息，日落前再去甘海子方向拍一次雪山。</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="daynum">三</div>
+        <h3>虎跳峡，最费腿也最过瘾</h3>
+        <div class="body">
+          <p>开车两小时到虎跳峡，走<strong>中虎跳</strong>的徒步栈道，来回大约四到五小时。</p>
+          <p>金沙江夹在玉龙雪山和哈巴雪山中间，落差极大。冬天水量小、水清天晴，是全程最震撼的一段。</p>
+          <p>鞋一定要穿抓地好的，栈道有台阶和窄的地方。包车往返比拼车灵活。</p>
+        </div>
+      </div>
+
+      <div class="day">
+        <div class="daynum">四</div>
+        <h3>轻松收尾，傍晚回家</h3>
+        <div class="body">
+          <p>上午去拉市海或文笔海环湖走一圈，平路，不累。</p>
+          <p>下午飞回上海。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="alt-block">
+      <h3>如果只有三天</h3>
+      <p>砍掉第四天。第三天虎跳峡早点出发，傍晚直接赶晚班机；或者干脆不去虎跳峡，第三天上午在拉市海骑一圈就返程。我更建议<strong>保留虎跳峡、砍掉拉市海</strong>。</p>
+    </div>
+
+    <div class="alt-block">
+      <h3>如果最后还是“暖和”更重要</h3>
+      <p>那就整个换成西双版纳：野象谷、热带植物园、曼听公园、告庄夜市。短袖、低海拔、省心，妈妈会很舒服，但要接受这趟没有大景可拍。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>出发前要办的五件事</h2>
+    <ol class="todo">
+      <li>
+        <div class="n">1</div>
+        <div>
+          <b>早点订机票</b>
+          <span>2027 年春节在 2 月 6 日，一月下旬已经进春运。丽江是热门线，至少提前一个月订，尽量挑上午去、傍晚回的班次，别把整天耗在路上。</span>
+        </div>
+      </li>
+      <li>
+        <div class="n">2</div>
+        <div>
+          <b>抢玉龙雪山大索道的票</b>
+          <span>实名制、每天限流，在官方小程序提前几天抢。冬天偶尔会因为大风临时停运，行程里留一个备用日。</span>
+        </div>
+      </li>
+      <li>
+        <div class="n">3</div>
+        <div>
+          <b>海拔上的注意</b>
+          <span>丽江 2400 米基本没感觉，但索道一下子上到 4506 米落差很大。上去慢走、少说话，不舒服就早点下来。</span>
+        </div>
+      </li>
+      <li>
+        <div class="n">4</div>
+        <div>
+          <b>按温差准备衣服</b>
+          <span>白天出太阳能到十五度以上，太阳一落就掉到零度上下。薄羽绒加可以脱的内搭最合适。紫外线很强，防晒别省。</span>
+        </div>
+      </li>
+      <li>
+        <div class="n">5</div>
+        <div>
+          <b>一双好走的鞋</b>
+          <span>虎跳峡那天全靠它。另外备一小包常用药和保温杯，高原干燥，多喝水。</span>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>行程可以随时改，先把机票和索道票定下来，其余都好调整。</p>
+  </footer>
+</div>
+
+<script>
+  (function () {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('.fs button'));
+    function apply(size, save) {
+      document.documentElement.style.setProperty('--base', size + 'px');
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.dataset.size === String(size)));
+      });
+      if (save) { try { localStorage.setItem('yn-fs', String(size)); } catch (e) {} }
+    }
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { apply(Number(b.dataset.size), true); });
+    });
+    var saved = null;
+    try { saved = localStorage.getItem('yn-fs'); } catch (e) {}
+    if (saved && ['19', '21', '26'].indexOf(saved) > -1) { apply(Number(saved), false); }
+  })();
+</script>
+</body>
+</html>
