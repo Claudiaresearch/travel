@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="2026年10月15-18日丽江四天行程">
-<title>丽江四天</title>
+<meta name="description" content="2026年10月14-18日 丽江·梅里·香格里拉五天行程">
+<title>丽江香格里拉五天</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700&display=swap">
 <style>
@@ -17,9 +17,9 @@
     --ink-2:#3c525f;
     --line:#c5d3da;
     --line-strong:#9fb3bd;
-    --snow:#0A6DA8;        /* 雪山蓝 */
+    --snow:#0A6DA8;
     --snow-soft:#e2eef7;
-    --gold:#B05E10;        /* 日照金山 */
+    --gold:#B05E10;
     --gold-soft:#f6ecdf;
     --shadow: 0 1px 2px rgba(20,35,45,.06), 0 6px 18px rgba(20,35,45,.06);
   }
@@ -42,74 +42,101 @@
   body{margin:0;background:var(--ground);color:var(--ink);
     font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
     font-size:var(--base);line-height:1.9;-webkit-text-size-adjust:100%}
-  .wrap{max-width:760px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+  .wrap{max-width:780px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
   h1,h2,h3{font-family:"Noto Serif SC","Songti SC","SimSun",serif;text-wrap:balance;line-height:1.4;margin:0}
   p{margin:0}
   strong{font-weight:700}
 
   .topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:18px 0}
-  .brandline{font-size:.78em;letter-spacing:.16em;color:var(--ink-2)}
+  .brandline{font-size:.78em;letter-spacing:.14em;color:var(--ink-2)}
   .fs{display:flex;align-items:center;gap:8px;font-size:.78em;color:var(--ink-2)}
   .fs button{font:inherit;font-family:inherit;min-width:52px;min-height:44px;padding:0 12px;
     border:1.5px solid var(--line-strong);border-radius:10px;background:var(--ground);color:var(--ink);cursor:pointer}
   .fs button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
   .fs button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 
-  header.hero{padding-block:22px 30px;border-bottom:3px solid var(--ink);margin-bottom:34px}
+  header.hero{padding-block:22px 30px;border-bottom:3px solid var(--ink);margin-bottom:10px}
   header.hero h1{font-size:2em;font-weight:700}
   .sub{margin-top:12px;font-size:1.02em;color:var(--ink-2)}
 
   section{margin-top:46px}
   h2{font-size:1.4em;font-weight:700;padding-bottom:12px;border-bottom:2px solid var(--line)}
+  .note{margin-top:16px;color:var(--ink-2);font-size:.92em}
 
-  /* 航班 */
-  .flights{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .fl{background:var(--snow-soft);border-left:8px solid var(--snow);border-radius:14px;padding:20px 22px}
-  .fl .when{font-size:.82em;font-weight:700;letter-spacing:.06em;color:var(--snow)}
-  .fl .time{margin-top:8px;font-size:1.5em;font-weight:700;font-variant-numeric:tabular-nums;
-    font-family:"Noto Serif SC",serif;line-height:1.3}
-  .fl .where{margin-top:6px;font-size:.88em;color:var(--ink-2)}
-  .fl .extra{margin-top:12px;padding-top:12px;border-top:1.5px solid var(--line);font-size:.85em}
-  .price{margin-top:18px;padding:16px 20px;border-radius:12px;background:var(--surface);border:1.5px solid var(--line);font-size:.92em}
+  /* 总览 */
+  .overview{margin-top:22px;display:flex;flex-direction:column;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+  .ov{display:grid;grid-template-columns:118px 1fr auto;gap:14px;align-items:center;padding:14px 18px;border-top:1.5px solid var(--line);background:var(--ground)}
+  .ov:first-child{border-top:0}
+  .ov:nth-child(even){background:var(--surface)}
+  .ov .d{font-weight:700;font-variant-numeric:tabular-nums;color:var(--snow);font-size:.95em}
+  .ov .w{font-size:.95em}
+  .ov .alt{font-size:.78em;color:var(--ink-2);white-space:nowrap;
+    border:1.5px solid var(--line-strong);border-radius:999px;padding:0 10px;line-height:1.9}
 
-  .warn{margin-top:18px;padding:20px 22px;border-radius:14px;background:var(--gold-soft);border:2px solid var(--gold)}
-  .warn h3{font-size:1.08em;color:var(--gold);margin-bottom:8px}
+  /* 票 */
+  .tickets{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+  .tk{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    padding:18px 20px;border-radius:14px;background:var(--snow-soft);border-left:7px solid var(--snow)}
+  .tk .kind{font-weight:700;font-size:.8em;color:var(--ground);background:var(--snow);border-radius:8px;padding:2px 10px;white-space:nowrap}
+  .tk .main{font-weight:700;font-variant-numeric:tabular-nums}
+  .tk .sm{margin-top:2px;font-size:.86em;color:var(--ink-2)}
+  .tk.pending{background:var(--gold-soft);border-left-color:var(--gold)}
+  .tk.pending .kind{background:var(--gold)}
 
   /* 每日 */
-  .days{margin-top:26px;display:flex;flex-direction:column;gap:0}
-  .day{padding-block:28px;border-top:1.5px solid var(--line)}
+  .days{margin-top:26px;display:flex;flex-direction:column}
+  .day{padding-block:30px;border-top:1.5px solid var(--line)}
   .day:first-child{border-top:3px solid var(--ink)}
   .day:last-child{border-bottom:1.5px solid var(--line)}
   .dhead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
   .ddate{font-family:"Noto Serif SC",serif;font-size:1.3em;font-weight:700;color:var(--snow)}
   .day h3{font-size:1.18em;font-weight:700}
-  .sched{margin-top:16px;display:flex;flex-direction:column;gap:12px}
-  .slot{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:start}
+  .meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px 10px;font-size:.8em;color:var(--ink-2)}
+  .meta span{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:2px 10px}
+  .meta span.cf{background:var(--gold-soft);border-color:var(--gold);color:var(--ink)}
+  .sched{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+  .slot{display:grid;grid-template-columns:92px 1fr;gap:16px;align-items:start}
   .slot .t{font-variant-numeric:tabular-nums;font-weight:700;font-size:.9em;color:var(--ink-2);
-    background:var(--surface);border-radius:8px;padding:2px 10px;text-align:center}
+    background:var(--surface);border-radius:8px;padding:2px 8px;text-align:center}
+  .slot.key .t{background:var(--snow);color:var(--ground)}
   .slot .d{font-size:.96em}
   .tip{margin-top:16px;padding:14px 18px;border-radius:12px;background:var(--surface);font-size:.87em;color:var(--ink-2)}
 
   /* 清单 */
-  ol.todo{margin:26px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:18px}
-  ol.todo li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
-    padding:20px 22px;background:var(--surface);border-radius:14px;border:1.5px solid var(--line)}
-  ol.todo .n{width:42px;height:42px;border-radius:12px;background:var(--snow);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9em;font-variant-numeric:tabular-nums}
-  ol.todo b{display:block;font-size:1.04em}
-  ol.todo span{display:block;margin-top:4px;color:var(--ink-2);font-size:.92em}
+  .todo-group{margin-top:22px}
+  .todo-group h3{font-size:1.06em;font-weight:700;margin-bottom:10px}
+  ol.todo{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+  ol.todo li{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+    padding:16px 18px;background:var(--surface);border-radius:14px;border:1.5px solid var(--line)}
+  ol.todo .n{width:38px;height:38px;border-radius:11px;background:var(--snow);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85em;font-variant-numeric:tabular-nums}
+  ol.todo span{font-size:.94em}
+  ol.todo .when{display:block;font-size:.82em;color:var(--gold);font-weight:700}
+
+  /* 费用 */
+  .cost{margin-top:22px;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+  .crow{display:flex;justify-content:space-between;gap:16px;padding:14px 18px;border-top:1.5px solid var(--line);font-size:.93em}
+  .crow:first-child{border-top:0}
+  .crow .v{font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;text-align:right}
+  .crow .m{display:block;font-size:.84em;color:var(--ink-2)}
+  .crow.head{background:var(--surface-2);font-weight:700;font-family:"Noto Serif SC",serif}
 
   .packs{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
   .pack{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
-  .pack h3{font-size:1.08em;font-weight:700;margin-bottom:10px}
+  .pack h3{font-size:1.06em;font-weight:700;margin-bottom:8px}
   .pack ul{margin:0;padding-left:1.2em;font-size:.93em}
   .pack li{margin-top:6px}
 
   footer{margin-top:48px;padding-top:22px;border-top:1.5px solid var(--line);color:var(--ink-2);font-size:.82em}
+  footer p + p{margin-top:8px}
 
-  @media (max-width:520px){
-    .flights,.packs{grid-template-columns:1fr}
-    .slot{grid-template-columns:84px 1fr;gap:12px}
+  @media (max-width:540px){
+    .packs{grid-template-columns:1fr}
+    .slot{grid-template-columns:80px 1fr;gap:12px}
+    .ov{grid-template-columns:1fr auto;gap:4px 12px}
+    .ov .d{grid-column:1 / -1}
+    .tk{grid-template-columns:1fr;gap:8px}
+    .tk .kind{justify-self:start}
   }
 </style>
 </head>
@@ -119,7 +146,7 @@
 <div class="wrap">
 
   <div class="topbar">
-    <div class="brandline">2026 年 10 月 15 – 18 日 · 上海 ⇄ 丽江 · 两个人</div>
+    <div class="brandline">2026 年 10 月 14 – 18 日 · 两个人</div>
     <div class="fs">
       <span>字号</span>
       <button type="button" data-size="19" aria-pressed="false">小</button>
@@ -129,127 +156,214 @@
   </div>
 
   <header class="hero">
-    <h1>丽江四天</h1>
-    <p class="sub">住在雪山脚下的白沙，不进古城。一天上雪山，一天走峡谷，头尾两天轻松。</p>
+    <h1>丽江香格里拉五天</h1>
+    <p class="sub">玉龙雪山一天，梅里雪山看日照金山，香格里拉看寺庙、草原和彩林。丽江和香格里拉之间坐高铁。</p>
   </header>
 
   <section>
-    <h2>机票（已定）</h2>
-
-    <div class="flights">
-      <div class="fl">
-        <div class="when">去程 · 10 月 15 日 周四</div>
-        <div class="time">08:35 → 12:20</div>
-        <div class="where">浦东 T2 → 丽江三义机场 · 春秋航空</div>
-        <div class="extra">06:40 前到机场，家里 05:40 出门，五点多起床。</div>
-      </div>
-      <div class="fl">
-        <div class="when">返程 · 10 月 18 日 周日</div>
-        <div class="time">18:20 → 21:50</div>
-        <div class="where">丽江三义机场 → 浦东 T2 · 春秋航空</div>
-        <div class="extra">16:20 前到机场，白沙 15:00 出发。到家约 23:00。</div>
-      </div>
-    </div>
-
-    <p class="price">往返每人 <strong>1432 元</strong>。去程和返程都在浦东，不用两头跑，但当天别自己开车停机场，打车更省事。</p>
-
-    <div class="warn">
-      <h3>春秋的行李要单独买</h3>
-      <p>特价票一般只含随身行李，托运要另外加购，<strong>在订单里提前买比到机场买便宜不少</strong>。丽江早晚只有几度，厚衣服占地方，回来大概还要带东西，两个人按各一件托运准备。</p>
+    <h2>五天一览</h2>
+    <div class="overview">
+      <div class="ov"><span class="d">10/14 周三</span><span class="w">晚上飞丽江，深夜住白沙 · 自己安排</span><span class="alt">2400 米</span></div>
+      <div class="ov"><span class="d">10/15 周四</span><span class="w">玉龙雪山、蓝月谷，高铁去香格里拉，晚上逛独克宗古城</span><span class="alt">最高 3240 米</span></div>
+      <div class="ov"><span class="d">10/16 周五</span><span class="w">松赞林寺、金沙江第一拐，住梅里 · 携程用车</span><span class="alt">睡 3400 米</span></div>
+      <div class="ov"><span class="d">10/17 周六</span><span class="w">日照金山、白马雪山、普达措 · 携程用车</span><span class="alt">最高 3700 米</span></div>
+      <div class="ov"><span class="d">10/18 周日</span><span class="w">纳帕海藏服旅拍，下午高铁回丽江，飞上海 · 自己安排</span><span class="alt">3300 米</span></div>
     </div>
   </section>
 
   <section>
-    <h2>四天安排</h2>
+    <h2>交通和住宿</h2>
+    <div class="tickets">
+      <div class="tk"><span class="kind">送机</span><div><div class="main">10/14 周三 16:00 从家出发</div><div class="sm">司机 15:50 到楼下，去浦东机场 T2</div></div></div>
+      <div class="tk"><span class="kind">飞机</span><div><div class="main">10/14 20:10 浦东 T2 → 23:50 丽江三义 T1</div><div class="sm">HU5026，首都航空实际承运 · 特惠行李 · 机上无餐食</div></div></div>
+      <div class="tk pending"><span class="kind">高铁</span><div><div class="main">10/15 D239 丽江 17:52 → 香格里拉 19:42</div><div class="sm">两人 126 元 · 预约中，约 10 月 1 日开售</div></div></div>
+      <div class="tk pending"><span class="kind">高铁</span><div><div class="main">10/18 C986 香格里拉 13:46 → 丽江 15:25</div><div class="sm">两人 140 元 · 预约中，约 10 月 3 日开售</div></div></div>
+      <div class="tk pending"><span class="kind">住宿</span><div><div class="main">10/14 丽江白沙民宿（自己订）</div><div class="sm">凌晨 1 点多入住，提前跟民宿打招呼</div></div></div>
+            <div class="tk"><span class="kind">住宿</span><div><div class="main">10/16 飞来寺 · 雪山醒来酒店（携程）</div><div class="sm">景区检票口旁，有供氧和屋顶餐厅，可以上屋顶看日照金山</div></div></div>
+      <div class="tk"><span class="kind">住宿</span><div><div class="main">10/15、10/17 香格里拉（自己订）</div><div class="sm">两晚订同一家，选独克宗古城附近、有供氧的；15 号晚吃饭逛转经筒、18 号旅拍都在古城</div></div></div>
+      <div class="tk"><span class="kind">飞机</span><div><div class="main">10/18 18:20 丽江三义 → 21:50 上海</div><div class="sm">起飞前 45 分钟截止值机</div></div></div>
+      <div class="tk"><span class="kind">接机</span><div><div class="main">10/18 21:50 上海接机</div><div class="sm">司机按落地时间来，你们大约 22:20–22:40 出来</div></div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>每天的安排</h2>
+    <p class="note">只有 16、17 号两天用携程（用车、飞来寺住宿、门票）。其余都自己安排：香格里拉的两晚酒店、15 号和 18 号的打车、18 号的旅拍。</p>
 
     <div class="days">
 
       <div class="day">
-        <div class="dhead"><span class="ddate">10/15 周四</span><h3>落地，先让身体适应</h3></div>
+        <div class="dhead"><span class="ddate">10/14 周三</span><h3>出发，深夜到丽江</h3></div>
+        <div class="meta"><span>自己安排</span><span>住：丽江白沙</span><span>接机自己约，23:50</span></div>
         <div class="sched">
-          <div class="slot"><span class="t">12:20</span><span class="d">落地三义机场，包车来接，去白沙约 50 分钟。</span></div>
-          <div class="slot"><span class="t">13:30</span><span class="d">民宿放行李，附近吃顿午饭。丽江 2400 米，第一天不爬升。</span></div>
-          <div class="slot"><span class="t">15:30</span><span class="d">玉湖村慢慢走走，石头路、洛克故居，背后就是玉龙雪山。想骑马进山谷也可以。</span></div>
-          <div class="slot"><span class="t">18:00</span><span class="d">在村里等日落，雪山会染上一层暖光。</span></div>
-          <div class="slot"><span class="t">19:00</span><span class="d">晚饭吃纳西菜：腊排骨火锅、鸡豆凉粉、丽江粑粑。</span></div>
+          <div class="slot"><span class="t">15:50</span><span class="d">送机司机到楼下，拿行李下楼。</span></div>
+          <div class="slot key"><span class="t">16:00</span><span class="d">出发去浦东机场 T2，赶在晚高峰前，大约一个半小时。</span></div>
+          <div class="slot"><span class="t">17:30</span><span class="d">到 T2，值机托运（19:25 截止）。<strong>在机场吃好晚饭</strong>，飞机上不供餐。</span></div>
+          <div class="slot key"><span class="t">20:10</span><span class="d">起飞。</span></div>
+          <div class="slot"><span class="t">23:50</span><span class="d">落地丽江三义机场 T1，接机司机已经在出口等。</span></div>
+          <div class="slot"><span class="t">00:20</span><span class="d">取完行李出来，上车去白沙，约 1 小时。</span></div>
+          <div class="slot"><span class="t">01:20</span><span class="d">到白沙民宿，洗个快澡就睡。</span></div>
         </div>
-        <p class="tip">第一天不要走急、不要洗太热的澡，早点睡，第二天才有力气上雪山。</p>
+        <p class="tip">带点零食上飞机。机票是“特惠行李”，出发前查一下有没有免费托运，要托运就提前加购。</p>
       </div>
 
       <div class="day">
-        <div class="dhead"><span class="ddate">10/16 周五</span><h3>玉龙雪山，这趟的主角</h3></div>
+        <div class="dhead"><span class="ddate">10/15 周四</span><h3>玉龙雪山、蓝月谷，傍晚高铁去香格里拉</h3></div>
+        <div class="meta"><span>自己安排</span><span>住：香格里拉（自己订）</span><span>包车全天，行李放车上</span></div>
         <div class="sched">
-          <div class="slot"><span class="t">07:30</span><span class="d">出发去玉龙雪山景区，白沙过去很近。</span></div>
-          <div class="slot"><span class="t">09:00</span><span class="d">坐冰川大索道上 4506 米观景台。缆车站能租羽绒服和氧气。上去以后慢走、少说话，不舒服就早点下来。</span></div>
-          <div class="slot"><span class="t">12:00</span><span class="d">下山，甘海子一带吃午饭。</span></div>
-          <div class="slot"><span class="t">14:00</span><span class="d">蓝月谷。十月水量足，颜色正从雨季的浑浊转回清透。</span></div>
-          <div class="slot"><span class="t">16:30</span><span class="d">回白沙休息。</span></div>
-          <div class="slot"><span class="t">18:00</span><span class="d">日落前再去甘海子方向拍一次雪山，这个点的光最好。</span></div>
+          <div class="slot"><span class="t">08:00</span><span class="d">起床，早餐。昨晚睡得晚，不赶早。</span></div>
+          <div class="slot"><span class="t">09:30</span><span class="d">退房，行李放车上，出发去玉龙雪山。</span></div>
+          <div class="slot"><span class="t">10:30</span><span class="d">坐<strong>云杉坪索道</strong>到 3240 米的草甸，正对玉龙雪山正面，木栈道绕一圈约 1 小时，四周是原始森林。</span></div>
+          <div class="slot"><span class="t">12:30</span><span class="d">下山到<strong>甘海子</strong>，在草甸上拍玉龙雪山全景。午饭在景区随便垫一口就行。</span></div>
+          <div class="slot"><span class="t">14:00</span><span class="d">蓝月谷，冰川融水的蓝绿色湖。</span></div>
+          <div class="slot"><span class="t">16:00</span><span class="d">出发去丽江站，约 1 小时。</span></div>
+          <div class="slot key"><span class="t">17:52</span><span class="d">D239 高铁，19:42 到香格里拉站，打车去独克宗古城，约 20 分钟。</span></div>
+          <div class="slot"><span class="t">20:00</span><span class="d">直接去<strong>独克宗古城</strong>吃晚饭。刚上高原，第一顿别太油腻，热汤面、藏式火锅都行。</span></div>
+          <div class="slot"><span class="t">21:00</span><span class="d">去龟山公园推<strong>大转经筒</strong>，顺时针转三圈，看看古城夜景。慢慢走，别较劲用力推。</span></div>
+          <div class="slot"><span class="t">21:45</span><span class="d">回酒店入住，<strong>不洗澡</strong>，早点睡。</span></div>
         </div>
-        <p class="tip">索道票要提前几天在官方小程序抢，实名限流。遇大风会临时停运，真停了就把这天和第四天对调。</p>
+        <p class="tip">十月中旬玉龙雪山顶上雪很少，大索道上去多是岩石；第二天还要去梅里看雪山，这天就选轻松的云杉坪，给妈妈留体力。<strong>例外</strong>：出发前两三天小红书上看到山顶刚下过雪，再考虑换大索道。</p>
       </div>
 
       <div class="day">
-        <div class="dhead"><span class="ddate">10/17 周六</span><h3>虎跳峡，最费腿也最过瘾</h3></div>
+        <div class="dhead"><span class="ddate">10/16 周五</span><h3>松赞林寺，一路开到梅里雪山</h3></div>
+        <div class="meta"><span>携程</span><span>住：飞来寺 · 雪山醒来 2 楼</span><span>车程约 4.5 小时</span><span>翻白马雪山垭口 4292 米</span></div>
         <div class="sched">
-          <div class="slot"><span class="t">07:30</span><span class="d">出发去虎跳峡，车程约 2 小时。</span></div>
-          <div class="slot"><span class="t">09:30</span><span class="d">走中虎跳的徒步栈道。金沙江夹在玉龙雪山和哈巴雪山中间，落差三千多米。</span></div>
-          <div class="slot"><span class="t">14:00</span><span class="d">上来吃个便饭，休息。</span></div>
-          <div class="slot"><span class="t">16:00</span><span class="d">返回白沙，晚上早点休息。</span></div>
+          <div class="slot"><span class="t">08:00</span><span class="d">早餐，行李寄存在酒店（两晚同一家就不用退房），携程司机来接。</span></div>
+          <div class="slot"><span class="t">08:30</span><span class="d">松赞林寺，约两小时。台阶多慢慢爬，进殿脱帽，顺时针走。</span></div>
+          <div class="slot"><span class="t">10:30</span><span class="d">出发去德钦，上车前给妈妈吃晕车药。</span></div>
+          <div class="slot"><span class="t">12:30</span><span class="d">路过奔子栏，停下垫口饭，别久留。</span></div>
+          <div class="slot"><span class="t">13:15</span><span class="d">金沙江第一拐观景台（月亮湾），江水在这里拐了一个大弯。</span></div>
+          <div class="slot"><span class="t">15:30</span><span class="d">梅里迎宾十三塔。</span></div>
+          <div class="slot"><span class="t">16:00</span><span class="d">入住<strong>雪山醒来酒店</strong>，歇一歇。</span></div>
+          <div class="slot"><span class="t">18:30</span><span class="d">上屋顶看看有没有“日落金山”。</span></div>
+          <div class="slot"><span class="t">19:00</span><span class="d"><strong>晚饭</strong>：酒店有屋顶餐厅，飞来寺也有藏餐馆，牦牛肉火锅、酥油茶都可以试试。吃完早点睡。</span></div>
         </div>
-        <p class="tip">来回四到五个小时，鞋一定要抓地好，栈道有陡台阶和窄段。带够水和两块巧克力。走不动随时可以原路折返，不用勉强走到底。</p>
+        <p class="tip">飞来寺夜里零下，羽绒服放手边。</p>
       </div>
 
       <div class="day">
-        <div class="dhead"><span class="ddate">10/18 周日</span><h3>平路收尾，傍晚回家</h3></div>
+        <div class="dhead"><span class="ddate">10/17 周六</span><h3>日照金山，白马雪山，普达措</h3></div>
+        <div class="meta"><span>携程用车</span><span>住：香格里拉（自己订）</span><span>车程约 4.5 小时</span></div>
         <div class="sched">
-          <div class="slot"><span class="t">08:30</span><span class="d">白沙早市转转，买点普洱、鲜花饼。</span></div>
-          <div class="slot"><span class="t">10:00</span><span class="d">拉市海或文笔海环湖走一圈，全程平路，不累。</span></div>
-          <div class="slot"><span class="t">13:00</span><span class="d">回民宿吃午饭、收拾行李。</span></div>
-          <div class="slot"><span class="t">15:00</span><span class="d">出发去机场。</span></div>
-          <div class="slot"><span class="t">18:20</span><span class="d">起飞，21:50 落浦东。</span></div>
+          <div class="slot"><span class="t">07:00</span><span class="d">起床，穿上羽绒服，在房间窗口或上<strong>酒店屋顶</strong>等。</span></div>
+          <div class="slot key"><span class="t">07:30</span><span class="d"><strong>日照金山</strong>：日出前后几分钟，雪山从灰蓝变成金色。看天，能不能看到是运气。</span></div>
+          <div class="slot"><span class="t">08:00</span><span class="d">早餐，吃快一点。</span></div>
+          <div class="slot"><span class="t">08:30</span><span class="d">出发回香格里拉。</span></div>
+          <div class="slot"><span class="t">09:30</span><span class="d">白马雪山观景台，停半小时拍照。</span></div>
+          <div class="slot"><span class="t">11:30</span><span class="d">奔子栏停一下，垫口饭、上个厕所，歇十几分钟就走。</span></div>
+          <div class="slot"><span class="t">14:30</span><span class="d">普达措，只走属都湖一条线，3.3 公里木栈道很平缓。<strong>十月中旬是彩林季</strong>。</span></div>
+          <div class="slot"><span class="t">17:00</span><span class="d">出园，携程司机送回我们自己订的酒店，休息。</span></div>
+          <div class="slot"><span class="t">19:00</span><span class="d"><strong>晚饭</strong>：尼西土锅鸡、牦牛肉火锅、青稞饼，配一碗牦牛酸奶。今天走得多，吃顿好的。</span></div>
         </div>
+        <p class="tip">这天路最长，也是全程最紧的一天。日照金山看完别拖，8:30 准时出发。要是路上耽误了，就让司机跳过白马雪山观景台（昨天翻垭口已经看过），保证 14:30 前到普达措。</p>
+      </div>
+
+      <div class="day">
+        <div class="dhead"><span class="ddate">10/18 周日</span><h3>纳帕海旅拍，下午回丽江飞上海</h3></div>
+        <div class="meta"><span>自己安排</span><span>旅拍在纳帕海，离城区约 15 分钟</span></div>
+        <div class="sched">
+          <div class="slot"><span class="t">07:45</span><span class="d">起床，早餐，退房，行李寄存在前台。</span></div>
+          <div class="slot"><span class="t">08:30</span><span class="d">到旅拍店，<strong>化妆换装</strong>，藏服加简妆大约要 45 分钟到 1 小时。</span></div>
+          <div class="slot"><span class="t">09:30</span><span class="d">出发去纳帕海，约 15 分钟。</span></div>
+          <div class="slot key"><span class="t">09:45</span><span class="d"><strong>拍摄</strong>，约一个半小时。草原上风大，拍的间隙给妈妈披件外套。</span></div>
+          <div class="slot"><span class="t">11:15</span><span class="d">回城，到店卸妆、换回自己的衣服，约 20 分钟。</span></div>
+          <div class="slot"><span class="t">12:00</span><span class="d">回酒店取行李，买点吃的带上高铁。</span></div>
+          <div class="slot"><span class="t">12:40</span><span class="d">打车去香格里拉站，约 20 分钟。</span></div>
+          <div class="slot"><span class="t">13:15</span><span class="d">进站。</span></div>
+          <div class="slot key"><span class="t">13:46</span><span class="d">C986 高铁，15:25 到丽江。</span></div>
+          <div class="slot"><span class="t">15:30</span><span class="d">去丽江三义机场，约 40 分钟。</span></div>
+          <div class="slot"><span class="t">16:10</span><span class="d">到机场，值机托运。</span></div>
+          <div class="slot key"><span class="t">18:20</span><span class="d">起飞。</span></div>
+          <div class="slot"><span class="t">21:50</span><span class="d">落地上海（航站楼以机票为准）。</span></div>
+          <div class="slot"><span class="t">22:30</span><span class="d">取完行李出来，接机司机在到达层等。</span></div>
+          <div class="slot"><span class="t">23:30</span><span class="d">到家。</span></div>
+        </div>
+        <p class="tip">这天的关键是化妆换装要算进去。约店的时候把话说死：<strong>8:30 开工，11:15 必须往回走</strong>，中午要赶高铁。选片可以拍完之后在微信上慢慢挑，不要当场等。</p>
       </div>
 
     </div>
   </section>
 
   <section>
-    <h2>出发前要订的四件事</h2>
-    <ol class="todo">
-      <li><div class="n">1</div><div><b>托运行李</b><span>在春秋的订单里提前加购，去程返程都要。</span></div></li>
-      <li><div class="n">2</div><div><b>玉龙雪山大索道票</b><span>官方小程序实名抢票，提前三到五天。留意当天风力预报。</span></div></li>
-      <li><div class="n">3</div><div><b>住宿</b><span>白沙或玉湖村的民宿，三晚。选带院子、能看到雪山的，别订大研古城里的。</span></div></li>
-      <li><div class="n">4</div><div><b>包车</b><span>四天包车最省心，日均大约四百到六百。虎跳峡那天尤其需要，比拼车灵活得多。</span></div></li>
-    </ol>
+    <h2>还要办的事</h2>
+
+    <div class="todo-group">
+      <h3>跟携程说（只留 16–17 两天）</h3>
+      <ol class="todo">
+        <li><div class="n">1</div><span>15 号接站住宿、18 号旅拍送站都<strong>不要了</strong>，只保留 16、17 两天，请<strong>重新报价</strong>。</span></li>
+        <li><div class="n">2</div><span>16 号早上 <strong>8:00 到我们自己订的酒店接</strong>（订好后把酒店名发给他们）；17 号傍晚<strong>送回同一家酒店</strong>。</span></li>
+        <li><div class="n">3</div><span>保留：16 号松赞林寺、金沙江第一拐、十三塔、飞来寺住宿；17 号日照金山、白马雪山观景台、普达措。门票和飞来寺住宿都要含。</span></li>
+        <li><div class="n">4</div><span>雪山醒来请安排<strong>面向雪山的观景房</strong>。</span></li>
+        <li><div class="n">5</div><span>17 号大概几点到普达措，想留两个半小时；顺便问停止入园时间。</span></li>
+        <li><div class="n">6</div><span>升级成轩逸或比亚迪汉（插混版）要加多少钱。</span></li>
+      </ol>
+    </div>
+
+    <div class="todo-group">
+      <h3>自己办</h3>
+      <ol class="todo">
+        <li><div class="n">7</div><span><strong>订香格里拉酒店两晚</strong>（15、17 号，<strong>同一家</strong>）：选独克宗古城附近、有供氧的。16 号早上行李直接寄存在酒店，不用退房。</span></li>
+        <li><div class="n">8</div><span><strong>约 18 号上午的藏服旅拍</strong>：9:00 到酒店接，9:30 在<strong>纳帕海</strong>开拍，两小时左右，11:30 要能回城。</span></li>
+        <li><div class="n">9</div><span><strong>约丽江接机 + 15 号包车</strong>：14 号 23:50 接机（航班号 JD5666）；15 号全天，白沙 → 云杉坪 → 甘海子 → 蓝月谷 → 16:00 出发，17:20 前送到丽江站。</span></li>
+        <li><div class="n">10</div><span><strong>订白沙民宿</strong>，确认凌晨一点多能入住。</span></li>
+        <li><div class="n">11</div><span><span class="when">提前 1–3 天</span><strong>买玉龙雪山门票和云杉坪索道</strong>，官方小程序实名购买，选 10:00–11:00 的时段。</span></li>
+        <li><div class="n">12</div><span><span class="when">10 月 1 日</span>看 D239 有没有抢到票，没抢到马上换车次，并告诉携程新的时间。</span></li>
+        <li><div class="n">13</div><span><span class="when">10 月 3 日</span>看 C986 有没有抢到票，这张最要紧。</span></li>
+        <li><div class="n">14</div><span>查首都航空“特惠行李”的托运额，需要就加购。</span></li>
+        <li><div class="n">15</div><span>跟上海送机司机确认：14 号 15:50 到楼下、去 T2、几个箱子。</span></li>
+        <li><div class="n">16</div><span>约上海接机：18 号 21:50 落地，先确认返程是浦东还是虹桥。</span></li>
+        <li><div class="n">17</div><span><span class="when">出发前两三天</span>看玉龙雪山有没有下雪，刚下过雪再考虑换大索道。</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>费用（两个人）</h2>
+    <div class="cost">
+      <div class="crow head"><span>携程（只保留 16–17 两天）</span><span></span></div>
+      <div class="crow"><span>用车两天 + 飞来寺一晚 + 门票<span class="m">原来 4 天 3 晚报价 5,200，去掉 15 号接站住宿和 18 号旅拍送站后要重新报价；自己估算大约 3,000–3,300</span></span><span class="v">待重新报价</span></div>
+      <div class="crow head"><span>自己付（估算）</span><span></span></div>
+      <div class="crow"><span>高铁两趟</span><span class="v">266 元</span></div>
+      <div class="crow"><span>香格里拉酒店两晚（15、17 号）</span><span class="v">约 600–900 元</span></div>
+      <div class="crow"><span>白沙民宿 1 晚</span><span class="v">约 300–500 元</span></div>
+      <div class="crow"><span>丽江接机 + 15 号包车全天</span><span class="v">约 600–800 元</span></div>
+      <div class="crow"><span>玉龙雪山门票 + 云杉坪索道<span class="m">每人约 160 元</span></span><span class="v">约 320 元</span></div>
+      <div class="crow"><span>18 号藏服旅拍</span><span class="v">约 300–600 元</span></div>
+      <div class="crow"><span>香格里拉市内打车（15 号、18 号）</span><span class="v">约 100 元</span></div>
+      <div class="crow"><span>吃饭（五天）<span class="m">午饭从简，主要花在晚饭上</span></span><span class="v">约 1,000 元</span></div>
+      <div class="crow"><span>托运行李、零花、特产</span><span class="v">约 800–1,000 元</span></div>
+    </div>
   </section>
 
   <section>
     <h2>带什么</h2>
     <div class="packs">
       <div class="pack">
-        <h3>衣服（白天 18–22℃，早晚 6–10℃，山顶零下）</h3>
+        <h3>衣服</h3>
         <ul>
-          <li>薄羽绒或厚外套，早晚和山顶都要穿</li>
-          <li>里面用可脱的薄毛衣打底，白天热了好脱</li>
-          <li>抓地好的徒步鞋，虎跳峡那天全靠它</li>
-          <li>帽子和围巾，山顶风大</li>
+          <li>丽江白天 18–22℃；香格里拉白天 12–16℃、夜里接近 0℃；<strong>飞来寺夜里零下</strong></li>
+          <li>羽绒服一定要带，雪山、飞来寺、日照金山那天早上都要穿</li>
+          <li>里面穿可脱的薄毛衣，白天出太阳会热</li>
+          <li>好走的鞋、帽子、围巾、手套</li>
         </ul>
       </div>
       <div class="pack">
         <h3>别忘了</h3>
         <ul>
-          <li>高倍防晒，高原紫外线很强，比上海厉害得多</li>
-          <li>润唇膏和面霜，干燥</li>
-          <li>保温杯，多喝水能缓解高原反应</li>
-          <li>常用药、身份证、充电宝</li>
+          <li>晕车药，16、17 号两天都是长时间盘山路</li>
+          <li>高倍防晒、墨镜、润唇膏</li>
+          <li>保温杯，多喝热水缓解高原反应</li>
+          <li>常用药、感冒药</li>
+          <li>身份证（坐高铁、飞机都要）、有 3C 标识的充电宝</li>
         </ul>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>索道、门票的价格以官方小程序为准。天气有变的话，第二天和第四天可以整天对调，不影响其他安排。</p>
+    <p>高铁票开售时间按 12306 提前 15 天估算；携程团费、景区开放时间以携程和景区公布为准。</p>
+    <p>日照金山看天气，看不到也别遗憾，梅里雪山本身就很壮观。</p>
   </footer>
 </div>
 
